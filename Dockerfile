@@ -2,7 +2,7 @@ FROM php:8-cli
 
 LABEL maintainer="robert@codepeak.se"
 
-RUN apt update ; apt install -y libzip-dev
+RUN apt update ; apt install -y libzip-dev unzip
 RUN docker-php-ext-install pcntl
 RUN docker-php-ext-install exif
 RUN docker-php-ext-install zip
