@@ -7,6 +7,8 @@ RUN docker-php-ext-install pcntl
 RUN docker-php-ext-install exif
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install intl
+RUN docker-php-ext-install soap
+RUN docker-php-ext-install bcmath
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
